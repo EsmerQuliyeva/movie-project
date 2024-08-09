@@ -1,0 +1,254 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #151515;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  padding: 0 50px;
+  height: 100px;
+  color: white;
+  font-family: "Sen", sans-serif;
+}
+.logo-container {
+  flex: 1;
+}
+.logo {
+  font-size: 30px;
+  color: red;
+}
+.menu-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.menu-list-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+.menu-container {
+  flex: 6;
+}
+.profile-container {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  justify-content: flex-end;
+}
+.profile-text a {
+  text-decoration: none;
+  color: #fff;
+}
+.profile-picture {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profile-text-container {
+  margin: 0 20px;
+}
+.toggle {
+  width: 40px;
+  height: 20px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.toggle-icon {
+  color: goldenrod;
+}
+.toggle-ball {
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  position: absolute;
+  right: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 1s ease all;
+}
+.sidebar {
+  background-color: black;
+  width: 50px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 90px;
+  align-items: center;
+}
+.left-menu-icon {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 45px;
+}
+.search-box {
+  width: 600px;
+  background: #fff;
+  margin: 200px auto 0;
+  border-radius: 5px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+input {
+  flex: 1;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #333;
+}
+button {
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+button .fa-solid {
+  width: 25px;
+  color: #555;
+  font-size: 22px;
+  cursor: pointer;
+}
+::placeholder {
+  color: #555;
+}
+.movie-list-item {
+  width: 325px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f0f0f0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 30px;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+}
+.card-content {
+  padding: 16px;
+}
+.card-title {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.card-desc {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.3;
+}
+.read-more {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #333;
+  border-radius: 4px;
+  margin-top: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+.films-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 130px;
+}
+.navbar-container.active {
+  background-color: white;
+  color: black;
+}
+.menu-list.active {
+  background-color: white;
+}
+.menu-list-item a.active {
+  color: black;
+}
+.sidebar.active {
+  background-color: white;
+}
+.left-menu-icon.active {
+  color: black;
+}
+.toggle.active {
+  background-color: black;
+}
+.toggle-ball.active {
+  background-color: white;
+  transform: translateX(-20px);
+}
+
+@media screen and (max-width: 992px) {
+
+  .menu-container {
+    display: none !important;
+  }
+  .toggle {
+    display: none !important;
+  }
+  .search-box {
+    width: 300px !important;
+    margin: 100px auto;
+    margin-left: 60px;
+  }
+  input {
+    height: 30px;
+  }
+  .films-display {
+    display: flex;
+    margin: 30px 30px 20px 70px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .navbar-container {
+    display: flex;
+    gap: 10px;
+  }
+  .menu-container {
+    display: block;
+  }
+  .menu-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .toggle {
+    display: block;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .toggle-ball {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+  }
+  .search-box {
+    width: 400px;
+    margin: 100px auto;
+  }
+  .films-display {
+    display: flex;
+    margin: 30px 30px 20px 70px;
+  }
+}
+

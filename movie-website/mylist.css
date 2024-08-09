@@ -1,0 +1,234 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #151515;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  padding: 0 50px;
+  height: 100px;
+  color: white;
+  font-family: "Sen", sans-serif;
+}
+.logo-container {
+  flex: 1;
+}
+.logo {
+  font-size: 30px;
+  color: red;
+}
+.menu-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.menu-list-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+.menu-container {
+  flex: 6;
+}
+.profile-container {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  justify-content: flex-end;
+}
+.profile-text a {
+  text-decoration: none;
+  color: #fff;
+}
+.profile-picture {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profile-text-container {
+  margin: 0 20px;
+}
+.toggle {
+  width: 40px;
+  height: 20px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.toggle-icon {
+  color: goldenrod;
+}
+.toggle-ball {
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  position: absolute;
+  right: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 1s ease all;
+}
+.sidebar {
+  background-color: black;
+  width: 50px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 90px;
+  align-items: center;
+}
+.left-menu-icon {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 45px;
+}
+.navbar-container.active {
+  background-color: white;
+  color: black;
+}
+.menu-list.active {
+  background-color: white;
+}
+.menu-list-item a.active {
+  color: black;
+}
+.sidebar.active {
+  background-color: white;
+}
+.left-menu-icon.active {
+  color: black;
+}
+.toggle.active {
+  background-color: black;
+}
+.toggle-ball.active {
+  background-color: white;
+  transform: translateX(-20px);
+}
+.movie-list-item{
+  margin-right: 30px;
+  position: relative;
+  transform: translateX(0);
+}
+.movie-list-item img {
+  width: 300px;
+  height: 300px;
+}
+.movie-list-item:hover .movie-list-item-img {
+  transform: scale(1.2);
+  margin: 0 30px;
+}
+.movie-list-item-second:hover .movie-list-item-img-second {
+  transform: scale(1.2);
+  margin: 0 30px;
+}
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button {
+  opacity: 1;
+}
+
+.movie-list-general {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 130px;
+}
+.movie-list-title.active {
+  color: black;
+}
+.save-icon {
+  position: absolute;
+  bottom: 0px;
+  right: 38px;
+  font-size: 20px;
+  z-index: 10;
+  color: white;
+}
+.movie-list-item-img,
+.movie-list-item-img-second {
+  margin-top: 10px;
+  transition: all 1s ease-in-out;
+  width: 300px;
+  height: 330px;
+  object-fit: cover;
+  opacity: 0.5;
+  border-radius: 10%;
+  padding: 30px;
+  position: relative;
+}
+.movie-list-item-title,
+.movie-list-item-title-second {
+  background-color: #333;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  top: 15%;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+.movie-list-item-desc,
+.movie-list-item-desc-second {
+  background-color: #333;
+  padding: 0 5px;
+  font-size: 15px;
+  font-weight: bold;
+  position: absolute;
+  top: 25%;
+  left: 50px;
+  width: 200px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+  text-overflow: clip;
+}
+
+.movie-list-item-button,
+.movie-list-item-button-second {
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+  margin-top: 10px;
+}
+
+
+@media screen and (max-width: 992px) {
+  .menu-container {
+    display: none;
+  }
+  .toggle {
+    display: none;
+  }
+
+}

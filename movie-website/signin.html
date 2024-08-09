@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="signin.css" />
+  </head>
+  <body>
+    <div class="signin">
+      <img src="./img/f-2.jpg" alt="signin image" class="signin_img" />
+      <form action="" class="signin-form">
+        <h1 class="signin-title">Sign In</h1>
+        <div class="signin-content">
+              <div class="signin-box">
+                <label class="file-input"><i class="fa-solid fa-image-portrait" class="signin-icon" id="img-upload"></i></label>
+                <div class="signin-box-input">
+                  <input type="file" id="fileInput">
+                  <label for="" class="image-label">Image</label>
+                </div>
+              </div>
+          <div class="signin-box">
+            <i class="ri-user-3-line" class="signin-icon"></i>
+            <div class="signin-box-input">
+              <input
+                type="email"
+                required
+                class="signin-input"
+                placeholder=""
+                id="email"
+              />
+              <label for="" class="signin-label">Email</label>
+            </div>
+          </div>
+          <div class="signin-box">
+            <i class="ri-git-repository-private-line" class="signin-icon"></i>
+            <div class="signin-box-input">
+              <input
+                type="password"
+                class="signin-input"
+                id="signin-pass"
+                placeholder=""
+                required
+              />
+              <label for="" class="signin-label">Password</label>
+              <i class="ri-eye-off-line" id="signin-eye"></i>
+            </div>
+          </div>
+        </div>
+        <button class="signin-button">Sign In</button>
+        <p class="signin-register">
+            You already have an account? <a href="login.html">Login</a>
+          </p>
+      </form>
+    </div>
+    <script type="module" src="signin.js"></script>
+  </body>
+</html>

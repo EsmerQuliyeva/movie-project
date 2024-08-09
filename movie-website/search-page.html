@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="search-page.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navbar">
+          <div class="navbar-container">
+            <div class="logo-container"><h1 class="logo">MOVIE</h1></div>
+            <div class="menu-container">
+              <ul class="menu-list">
+                <li class="menu-list-item"><a href="index.html">Home</a></li>
+                <li class="menu-list-item">
+                  <a href="search-page.html">Search</a>
+                </li>
+                <li class="menu-list-item">
+                  <a href="./mylist.html">My List</a>
+                </li>
+                <li class="menu-list-item">
+                  <a href="https://www.filmon.com/tv/filmon-classic-films"
+                    >Live</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="profile-container">
+              <img
+                class="profile-picture"
+                src=""
+                alt="profile"
+              />
+              <div class="profile-text-container">
+                <span class="profile-text"
+                  ><a href="signin.html" class="profile-name"></a></span
+                >
+              </div>
+              <div class="toggle">
+                <i class="fa-solid fa-moon toggle-icon"></i>
+                <i class="fa-solid fa-sun toggle-icon"></i>
+                <div class="toggle-ball"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar">
+          <a href="index.html"
+            ><i class="left-menu-icon fa-solid fa-house"></i
+          ></a>
+          <a href="search-page.html"
+            ><i class="left-menu-icon fa-solid fa-magnifying-glass"></i
+          ></a>
+          <a href="login.html"
+            ><i class="left-menu-icon fa-solid fa-user"></i
+          ></a>
+          <a href="mylist.html"
+            ><i class="left-menu-icon fa-solid fa-bookmark"></i
+          ></a>
+          <a href="https://www.filmon.com/tv/filmon-classic-films"
+            ><i class="left-menu-icon fa-solid fa-tv"></i
+          ></a>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div class="search-box">
+        <div class="row">
+          <input
+            type="text"
+            class="input-box"
+            placeholder="Search film"
+            autocomplete="off"
+          />
+          <button class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+      <div class="films-display"></div>
+    </section>
+    <script src="search-page.js" type="module"></script>
+  </body>
+</html>

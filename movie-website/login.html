@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="login">
+      <img src="./img//f-1.jpg" alt="login image" class="login_img" />
+      <form action="" class="login-form">
+        <h1 class="login-title">Login</h1>
+        <div class="login-content">
+          <div class="login-box">
+            <i class="ri-user-3-line" class="login-icon"></i>
+            <div class="login-box-input">
+              <input type="email" required class="login-input" placeholder="" id="email" />
+              <label for="" class="login-label">Email</label>
+            </div>
+          </div>
+          <div class="login-box">
+            <i class="ri-git-repository-private-line" class="login-icon"></i>
+            <div class="login-box-input">
+              <input
+                type="password"
+                class="login-input"
+                id="login-pass"
+                placeholder=""
+                required
+              />
+              <label for="" class="login-label">Password</label>
+              <i class="ri-eye-off-line" id="login-eye"></i>
+            </div>
+          </div>
+        </div>
+        <div class="login-check">
+          <div class="login-check-group">
+            <input type="checkbox" class="login-check-input" />
+            <label for="" class="login-check-label">Remember me</label>
+          </div>
+          <a href="" class="login-forgot">Forgot password?</a>
+        </div>
+        <button class="login-button">Login</button>
+        <p class="login-register">
+          Don`t have an account? <a href="signin.html">Register</a>
+        </p>
+      </form>
+    </div>
+    <script type="module" src="login.js"></script>
+  </body>
+</html>

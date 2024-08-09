@@ -1,0 +1,161 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+body {
+  color: hsl(0, 0%, 100%);
+}
+input,
+button {
+  border: none;
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.signin {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+.signin_img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+.signin-form {
+  position: relative;
+  background-color: hsla(0, 0%, 10%, 0.1);
+  border: 2px solid hsl(0, 0%, 100%);
+  margin-inline: 24px;
+  padding: 40px 24px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+}
+.signin-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+.signin-content,
+.signin-box {
+  display: grid;
+}
+.signin-content {
+  row-gap: 28px;
+  margin-bottom: 24px;
+}
+.signin-box {
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: 12px;
+  border-bottom: 2px solid hsl(0, 0%, 100%);
+}
+.signin-icon,
+.signin-eye,
+.file-input {
+  font-size: 20px;
+}
+.signin-input,
+#email {
+  width: 100%;
+  padding-block: 13px;
+  background: none;
+  color: hsl(0, 0%, 100%);
+  position: relative;
+  z-index: 1;
+}
+.file-input i {
+  cursor: pointer;
+  font-size: 20px;
+}
+#fileInput {
+  display: none;
+}
+.signin-input,
+.file-input {
+  width: 100%;
+  padding-block: 0.8rem;
+  background: none;
+  color: hsl(0, 0%, 100%);
+  position: relative;
+  z-index: 1;
+}
+.signin-box-input {
+  position: relative;
+}
+.signin-label {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  transition: top 0.3s, font-size 0.3s;
+}
+#signin-eye {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  z-index: 10;
+  cursor: pointer;
+}
+.signin-box:nth-child(2) input {
+  padding-right: 1.8rem;
+}
+
+.signin-button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.signin-register {
+  text-align: center;
+}
+.signin-register a {
+  color: hsl(0, 0%, 100%);
+  font-weight: bolder;
+}
+.signin-register a:hover {
+  text-decoration: underline;
+}
+.signin-input:focus + .signin-label {
+  top: -12px;
+  font-size: 20px;
+}
+.signin-input:not(:placeholder-shown).signin-input:not(:focus) + .signin-label {
+  top: -12px;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 576px) {
+  .signin {
+    justify-content: center;
+  }
+  .signin-form {
+    width: 432px;
+    padding: 4rem 3rem 3.5rem;
+    border-radius: 1.5rem;
+  }
+  .signin-title {
+    font-size: 2rem;
+  }
+}
+

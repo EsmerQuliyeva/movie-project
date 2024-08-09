@@ -1,0 +1,425 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: #151515;
+  color: white;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  padding: 0 50px;
+  height: 100px;
+  color: white;
+  font-family: "Sen", sans-serif;
+}
+.logo-container {
+  flex: 1;
+}
+.logo {
+  font-size: 30px;
+  color: red;
+}
+.menu-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.menu-list-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+.menu-container {
+  flex: 6;
+}
+.profile-container {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  justify-content: flex-end;
+}
+.profile-text a {
+  text-decoration: none;
+  color: #fff;
+}
+.profile-picture {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profile-text-container {
+  margin: 0 20px;
+}
+.toggle {
+  width: 40px;
+  height: 20px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.background {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.toggle-icon {
+  color: goldenrod;
+}
+.toggle-ball {
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  position: absolute;
+  right: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 1s ease all;
+}
+.sidebar {
+  background-color: black;
+  width: 50px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 90px;
+  align-items: center;
+}
+.left-menu-icon {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 45px;
+}
+.container {
+  background-color: #151515;
+  min-height: calc(100vh - 50px);
+  color: white;
+}
+.content-container {
+  margin-left: 50px;
+}
+.featured-content {
+  height: 50vh;
+  padding: 50px;
+  overflow: hidden;
+}
+.featured-title {
+  width: 200px;
+  font-size: 30px;
+}
+.featured-desc {
+  width: 500px;
+  color: rgb(211, 211, 211);
+  margin: 20px 0;
+  font-size: 25px;
+}
+.featured-button {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+.movie-list-container,
+.movie-list-container-second {
+  padding: 0 40px;
+}
+.movie-list-wrapper,
+.movie-list-wrapper-second {
+  position: relative;
+  overflow: hidden;
+}
+.movie-list,
+.movie-list-second {
+  display: flex;
+  height: 300px;
+  align-items: center;
+  gap: 10px;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+.movie-list-item,
+.movie-list-item-second {
+  margin-right: 30px;
+  position: relative;
+  transform: translateX(0);
+}
+.movie-list-item img {
+  width: 300px;
+  height: 300px;
+}
+.movie-list-item:hover .movie-list-item-img {
+  transform: scale(1.2);
+  margin: 0 30px;
+}
+.movie-list-item-second:hover .movie-list-item-img-second {
+  transform: scale(1.2);
+  margin: 0 30px;
+}
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button {
+  opacity: 1;
+}
+.movie-list-item-second:hover .movie-list-item-title-second,
+.movie-list-item-second:hover .movie-list-item-desc-second,
+.movie-list-item-second:hover .movie-list-item-button-second {
+  opacity: 1;
+}
+.save-icon {
+  position: absolute;
+  bottom: 35px;
+  right: 38px;
+  color: white;
+  font-size: 20px;
+  z-index: 10;
+}
+.movie-list-item-img,
+.movie-list-item-img-second {
+  margin-top: 10px;
+  transition: all 1s ease-in-out;
+  width: 300px;
+  height: 330px;
+  object-fit: cover;
+  opacity: 0.5;
+  border-radius: 10%;
+  padding: 30px;
+  position: relative;
+}
+.movie-list-item-title,
+.movie-list-item-title-second {
+  background-color: #333;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  top: 15%;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+.movie-list-item-desc,
+.movie-list-item-desc-second {
+  background-color: #333;
+  padding: 0 5px;
+  font-size: 15px;
+  font-weight: bold;
+  position: absolute;
+  top: 25%;
+  left: 50px;
+  width: 200px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+  text-overflow: clip;
+}
+
+.movie-list-item-button,
+.movie-list-item-button-second {
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+  margin-top: 10px;
+}
+.arrow,
+.arrow-second {
+  font-size: 120px;
+  position: absolute;
+  top: 90px;
+  right: 0;
+  color: lightgray;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.movie-list-general {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 130px;
+}
+
+.film-picture {
+  margin-top: 10px;
+  transition: all 1s ease-in-out;
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  opacity: 0.5;
+  border-radius: 20%;
+  padding: 10px;
+}
+.film-name {
+  background-color: #333;
+  padding: 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.container.active {
+  background-color: white;
+}
+.movie-list-title.active {
+  color: black;
+}
+.navbar-container.active {
+  background-color: white;
+  color: black;
+}
+.menu-list.active {
+  background-color: white;
+}
+.menu-list-item a.active {
+  color: black;
+}
+.sidebar.active {
+  background-color: white;
+}
+.left-menu-icon.active {
+  color: black;
+}
+.toggle.active {
+  background-color: black;
+}
+.toggle-ball.active {
+  background-color: white;
+  transform: translateX(-20px);
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 992px) {
+  .menu-container {
+    display: none!important;
+  }
+  .toggle {
+    display: none !important;
+  }
+  .navbar-container{
+    justify-content: space-between;
+  }
+  .featured-content {
+    width: 200px;
+  }
+  .featured-desc {
+    font-size: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    
+  }
+  .featured-title {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  .movie-list-general-container {
+    display: flex;
+    align-items: center;
+  }
+  .movie-list-title {
+    margin: 30px auto;
+  }
+  .movie-list-title-second {
+    margin: 30px auto;
+  }
+  .logo{
+    font-size: 20px;
+  }
+  .movie-list-item{
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .logo-container {
+    flex: 1;
+  }
+    .featured-content {
+    width: 618px;
+  }
+  .featured-desc {
+    font-size: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .featured-title {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  .movie-list-general-container {
+    display: flex;
+    align-items: center;
+  }
+  .movie-list-title {
+    margin: 30px auto;
+  }
+  .movie-list-title-second {
+    margin: 30px auto;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .logo-container {
+    flex: 1;
+  }
+  /* bu hisseni sorus  */
+  .menu-container {
+    display: block;
+  }
+
+  .menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* bunu sorus */
+  .toggle {
+    display: block;
+  }
+  .featured-content {
+    width: 100%;
+  }
+  .featured-desc {
+    font-size: 25px;
+    margin-bottom: 40px;
+    /* text-wrap legv edirem islemir niye */
+  }
+  .featured-title {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  .movie-list-general-container {
+    display: flex;
+    align-items: center;
+  }
+  .movie-list-title {
+    margin: 30px auto;
+  }
+  .movie-list-title-second {
+    margin: 30px auto;
+  }
+}
+
